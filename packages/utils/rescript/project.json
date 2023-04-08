@@ -1,0 +1,35 @@
+{
+  "name": "utils-rescript",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/utils/rescript/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/esbuild:esbuild",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/utils/rescript",
+        "main": "packages/utils/rescript/src/index.ts",
+        "tsConfig": "packages/utils/rescript/tsconfig.lib.json",
+        "assets": ["packages/utils/rescript/*.md"],
+        "generatePackageJson": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/utils/rescript/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/vite:test",
+      "outputs": ["coverage/packages/utils/rescript"],
+      "options": {
+        "passWithNoTests": true,
+        "reportsDirectory": "../../../coverage/packages/utils/rescript"
+      }
+    }
+  },
+  "tags": []
+}
