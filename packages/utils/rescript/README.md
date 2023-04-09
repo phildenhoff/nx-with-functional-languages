@@ -1,6 +1,6 @@
 # utils-rescript
 
-This library was generated with [Nx](https://nx.dev).
+An Nx library testing out using Rescript in an Nx monorepo.
 
 ## Building
 

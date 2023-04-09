@@ -5,26 +5,35 @@
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@nrwl/esbuild:esbuild",
-      "outputs": ["{options.outputPath}"],
+      "executor": "nx:run-commands",
       "options": {
-        "outputPath": "dist/packages/utils/rescript",
-        "main": "packages/utils/rescript/src/index.ts",
-        "tsConfig": "packages/utils/rescript/tsconfig.lib.json",
-        "assets": ["packages/utils/rescript/*.md"],
-        "generatePackageJson": true
-      }
+        "command": "pnpm rescript",
+        "cwd": "packages/utils/rescript"
+      },
+      "outputs": [
+        "{options.cwd}/src/**.bs.js",
+        "{options.cwd}/src/**.gen.ts"
+      ],
+      "inputs": [
+        "{projectRoot}/src/**.res"
+      ]
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
-        "lintFilePatterns": ["packages/utils/rescript/**/*.ts"]
+        "lintFilePatterns": [
+          "packages/utils/rescript/**/*.ts"
+        ]
       }
     },
     "test": {
       "executor": "@nrwl/vite:test",
-      "outputs": ["coverage/packages/utils/rescript"],
+      "outputs": [
+        "coverage/packages/utils/rescript"
+      ],
       "options": {
         "passWithNoTests": true,
         "reportsDirectory": "../../../coverage/packages/utils/rescript"

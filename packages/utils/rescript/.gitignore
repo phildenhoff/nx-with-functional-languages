@@ -1,0 +1,3 @@
+src/**/*.gen.ts
+src/**/*.bs.js
+lib/

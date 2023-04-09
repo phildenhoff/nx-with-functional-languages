@@ -1,1 +1,3 @@
-export * from './lib/utils-rescript';
+// @ts-check
+
+export * from './counterMessage.gen';

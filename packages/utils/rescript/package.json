@@ -1,5 +1,12 @@
 {
   "name": "@nx-with-functional-languages/utils/rescript",
   "version": "0.0.1",
-  "type": "commonjs"
+  "type": "commonjs",
+  "dependencies": {
+    "rescript": "^10.1.4"
+  },
+  "devDependencies": {
+    "vite": "^4.2.1",
+    "vitest": "^0.29.8"
+  }
 }
