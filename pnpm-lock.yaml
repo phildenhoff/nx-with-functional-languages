@@ -9,6 +9,7 @@ specifiers:
   '@nrwl/nx-cloud': latest
   '@nrwl/vite': 15.9.2
   '@nrwl/workspace': 15.9.2
+  '@scala-js/vite-plugin-scalajs': ^1.0.0
   '@types/jest': ^29.4.0
   '@types/node': 18.7.1
   '@typescript-eslint/eslint-plugin': ^5.36.1
@@ -47,6 +48,7 @@ devDependencies:
   '@nrwl/nx-cloud': 15.3.5
   '@nrwl/vite': 15.9.2_oswwkmawy6cw3riyujiodpvtni
   '@nrwl/workspace': 15.9.2
+  '@scala-js/vite-plugin-scalajs': 1.0.0_@types+node@18.7.1
   '@types/jest': 29.5.0
   '@types/node': 18.7.1
   '@typescript-eslint/eslint-plugin': 5.57.1_pqrk3w2qxepir23ulmrbnq434y
@@ -2504,6 +2506,19 @@ packages:
       argparse: 1.0.10
       colors: 1.2.5
       string-argv: 0.3.1
+    dev: true
+
+  /@scala-js/vite-plugin-scalajs/1.0.0_@types+node@18.7.1:
+    resolution: {integrity: sha512-QqeOXFWiwZyl4LrtAg7ZMeoShVWTD+4qcmuv0M7QNCu8QYzf+h3ysozbmyWYJKVpxJYMLnuSZZSiygD8Tzh+eg==}
+    dependencies:
+      vite: 4.2.1_@types+node@18.7.1
+    transitivePeerDependencies:
+      - '@types/node'
+      - less
+      - sass
+      - stylus
+      - sugarss
+      - terser
     dev: true
 
   /@sinclair/typebox/0.24.51:
