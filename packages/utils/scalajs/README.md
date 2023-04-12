@@ -1,8 +1,11 @@
 # utils-scalajs
 
-This library was generated with [Nx](https://nx.dev).
+A Scala.js library using Nx.
 
 ## Building
+
+As prerequisites, you'll need Nix installed, and `nix-shell` must be available.
+The build will install a version of `sbt` within the Nix shell, run the build, then output it into `dist/`.
 
 Run `nx build utils-scalajs` to build the library.
 
