@@ -28,6 +28,9 @@
       "@nx-with-functional-languages/utils/rescript": [
         "packages/utils/rescript/src/index.ts",
         "packages/utils/rescript/src/index_bs.js"
+      ],
+      "@nx-with-functional-languages/utils/scalajs": [
+        "packages/utils/scalajs/src/index.ts"
       ]
     }
   },
