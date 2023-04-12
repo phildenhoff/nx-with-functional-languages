@@ -5,11 +5,16 @@
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@nrwl/vite:build",
-      "outputs": ["{options.outputPath}"],
+      "command": "nix-shell -p --command 'sbt compile; sbt fastLinkJS' sbt; cp ./target/scala-*/livechart-fastopt/main.js dist/main.js",
       "options": {
-        "outputPath": "dist/packages/utils/scalajs"
-      }
+        "cwd": "packages/utils/scalajs"
+      },
+      "inputs": [
+        "{projectRoot}/src/**/*.scala"
+      ],
+      "outputs": [
+        "{projectRoot}/dist/main.js"
+      ]
     },
     "test": {
       "executor": "@nrwl/vite:test",
