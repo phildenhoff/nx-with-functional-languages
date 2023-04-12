@@ -5,13 +5,27 @@
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@nrwl/js:swc",
-      "outputs": ["{options.outputPath}"],
+      "executor": "nx:run-commands",
+      "inputs": [
+        "{projectRoot}/src/**.cljs"
+      ],
+      "outputs": [
+        "dist/main.js"
+      ],
       "options": {
-        "outputPath": "dist/packages/utils/clojurescript",
-        "main": "packages/utils/clojurescript/src/index.ts",
-        "tsConfig": "packages/utils/clojurescript/tsconfig.lib.json",
-        "assets": ["packages/utils/clojurescript/*.md"]
+        "commands": [
+          "nix-shell -p --command 'clj -M -m cljs.main --optimizations advanced -c hello-world.core ' clojure",
+          "mkdir -p dist/",
+          "mv out/main.js dist/main.js"
+        ],
+        "cwd": "packages/utils/clojurescript",
+        "parallel": false
+      }
+    },
+    "serve": {
+      "command": "nix-shell -p --command 'clj -M --main cljs.main --compile hello-world.core --repl' clojure",
+      "options": {
+        "cwd": "packages/utils/clojurescript"
       }
     },
     "lint": {
