@@ -1,4 +1,4 @@
-import { tests } from './tests';
+import { tests } from './from-rescript';
 
 describe('tests', () => {
   it('should work', () => {
