@@ -15,12 +15,16 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nx-with-functional-languages/t2": ["packages/t2/src/index.js"],
-      "@nx-with-functional-languages/t3": ["packages/t3/src/index.js"],
-      "@nx-with-functional-languages/testing-impls": [
-        "packages/testing-impls/src/index.ts"
+      "@nx-with-functional-languages/js-no-build": [
+        "packages/js-no-build/src/index.js"
       ],
-      "@nx-with-functional-languages/tests": ["packages/tests/src/index.ts"],
+      "@nx-with-functional-languages/t3": ["packages/t3/src/index.js"],
+      "@nx-with-functional-languages/ts-using-tsc": [
+        "packages/ts-using-tsc/src/index.ts"
+      ],
+      "@nx-with-functional-languages/ts-using-vite": [
+        "packages/ts-using-vite/src/index.ts"
+      ],
       "@nx-with-functional-languages/utils/rescript": [
         "packages/utils/rescript/src/index.ts",
         "packages/utils/rescript/src/index_bs.js"
