@@ -4,6 +4,12 @@
   "sourceRoot": "packages/utils/purescript/src",
   "projectType": "library",
   "targets": {
+    "compile": {
+      "command": "pnpm compile",
+      "options": {
+        "cwd": "packages/utils/purescript"
+      }
+    },
     "build": {
       "executor": "@nrwl/esbuild:esbuild",
       "outputs": ["{options.outputPath}"],
