@@ -1,0 +1,27 @@
+{
+  "name": "utils-purescript",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/utils/purescript/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/esbuild:esbuild",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/utils/purescript",
+        "main": "packages/utils/purescript/src/index.ts",
+        "tsConfig": "packages/utils/purescript/tsconfig.lib.json",
+        "assets": [],
+        "generatePackageJson": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/utils/purescript/**/*.ts"]
+      }
+    }
+  },
+  "tags": []
+}

@@ -28,6 +28,9 @@
       "@nx-with-functional-languages/utils/clojurescript": [
         "packages/utils/clojurescript/dist/main.js"
       ],
+      "@nx-with-functional-languages/utils/purescript": [
+        "packages/utils/purescript/src/index.ts"
+      ],
       "@nx-with-functional-languages/utils/rescript": [
         "packages/utils/rescript/src/index.ts",
         "packages/utils/rescript/src/index_bs.js"
