@@ -1,5 +1,10 @@
 {
   "files.watcherExclude": {
     "**/target": true
-  }
+  },
+  "purescript.outputDirectory": "packages/utils/purescript/output/",
+  "purescript.pscIdelogLevel": "",
+  "purescript.packagePath": "packages/utils/purescript/",
+  "purescript.pursExe": "purs",
+  "purescript.sourcePath": "packages/utils/purescript/src"
 }

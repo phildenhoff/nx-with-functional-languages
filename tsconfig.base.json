@@ -29,7 +29,7 @@
         "packages/utils/clojurescript/dist/main.js"
       ],
       "@nx-with-functional-languages/utils/purescript": [
-        "packages/utils/purescript/src/index.ts"
+        "packages/utils/purescript/output/index.ts"
       ],
       "@nx-with-functional-languages/utils/rescript": [
         "packages/utils/rescript/src/index.ts",

@@ -12,13 +12,22 @@ to generate this file without the comments in this block.
 -}
 { name = "my-project"
 , dependencies =
-  [ "assert"
+  [ "aff-promise"
+  , "assert"
   , "console"
+  , "dts"
   , "effect"
+  , "either"
   , "foldable-traversable"
+  , "integers"
   , "lists"
+  , "maybe"
+  , "newtype"
+  , "nullable"
   , "prelude"
   , "ts-bridge"
+  , "tuples"
+  , "variant"
   ]
 , packages = ./packages.dhall
 , sources = [ "src/**/*.purs", "test/**/*.purs" ]
