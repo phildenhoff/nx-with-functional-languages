@@ -11,9 +11,9 @@
         "cwd": "packages/utils/rescript"
       },
       "outputs": [
-        "{options.cwd}/src/**.bs.js",
+        "{projectRoot}/src/**.bs.js",
         "{projectRoot}/lib/",
-        "{options.cwd}/src/**.gen.ts"
+        "{projectRoot}/src/**.gen.ts"
       ],
       "inputs": [
         "{projectRoot}/src/**.res"
