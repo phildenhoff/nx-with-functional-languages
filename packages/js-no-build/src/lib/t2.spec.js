@@ -1,6 +1,6 @@
-import { t2 } from './t2';
-describe('t2', () => {
-  it('should work', () => {
-    expect(t2()).toEqual('t2');
+import { makeOnce } from './t2';
+describe('makeOnce', () => {
+  it('must return `once`', () => {
+    expect(makeOnce()).toEqual('once');
   });
 });

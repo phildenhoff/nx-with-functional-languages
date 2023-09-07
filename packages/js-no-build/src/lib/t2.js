@@ -1,5 +1,5 @@
 import { make } from '@nx-with-functional-languages/utils/rescript';
 
-export function t2() {
-  return make(1);
+export function makeOnce() {
+  return make({ count: 1 });
 }
