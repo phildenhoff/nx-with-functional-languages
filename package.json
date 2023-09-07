@@ -10,6 +10,7 @@
     "tslib": "^2.3.0"
   },
   "devDependencies": {
+    "@danielx/civet": "^0.6.31",
     "@nrwl/esbuild": "15.9.2",
     "@nrwl/eslint-plugin-nx": "15.9.2",
     "@nrwl/jest": "15.9.2",
