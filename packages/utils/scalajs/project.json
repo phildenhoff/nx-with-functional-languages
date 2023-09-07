@@ -9,23 +9,19 @@
       "options": {
         "cwd": "packages/utils/scalajs"
       },
-      "inputs": [
-        "{projectRoot}/src/**/*.scala"
-      ],
-      "outputs": [
-        "{projectRoot}/dist/main.js"
-      ]
+      "inputs": ["{projectRoot}/src/**/*.scala"],
+      "outputs": ["{projectRoot}/dist/main.js"]
     },
     "test": {
-      "executor": "@nrwl/vite:test",
-      "outputs": ["coverage/packages/utils/scalajs"],
+      "executor": "@nx/vite:test",
+      "outputs": ["{workspaceRoot}/coverage/packages/utils/scalajs"],
       "options": {
         "passWithNoTests": true,
         "reportsDirectory": "../../../coverage/packages/utils/scalajs"
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["packages/utils/scalajs/**/*.ts"]

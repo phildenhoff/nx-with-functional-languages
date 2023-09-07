@@ -6,16 +6,10 @@
   "targets": {
     "build": {
       "executor": "nx:run-commands",
-      "outputs": [
-        "{options.outputPath}"
-      ],
-      "inputs": [
-        "{projectRoot}/src/**/*.civet",
-        "{projectRoot}/src/*.civet"
-      ],
+      "outputs": ["{workspaceRoot}/packages/utils/civet/dist/"],
+      "inputs": ["{projectRoot}/src/**/*.civet", "{projectRoot}/src/*.civet"],
       "options": {
         "cwd": "packages/utils/civet",
-        "outputPath": "packages/utils/civet/dist/",
         "commands": [
           "pnpm civet -c src/**/*.civet -o dist/.ts",
           "rm dist/index.ts || true",
@@ -24,21 +18,15 @@
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
-      "outputs": [
-        "{options.outputFile}"
-      ],
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": [
-          "packages/utils/civet/**/*.ts"
-        ]
+        "lintFilePatterns": ["packages/utils/civet/**/*.ts"]
       }
     },
     "test": {
-      "executor": "@nrwl/vite:test",
-      "outputs": [
-        "coverage/packages/utils/civet"
-      ],
+      "executor": "@nx/vite:test",
+      "outputs": ["{workspaceRoot}/coverage/packages/utils/civet"],
       "options": {
         "passWithNoTests": true,
         "reportsDirectory": "../../../coverage/packages/utils/civet"

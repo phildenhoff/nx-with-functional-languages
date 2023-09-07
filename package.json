@@ -11,14 +11,6 @@
   },
   "devDependencies": {
     "@danielx/civet": "^0.6.31",
-    "@nrwl/esbuild": "16.8.0",
-    "@nrwl/eslint-plugin-nx": "16.8.0",
-    "@nrwl/jest": "16.8.0",
-    "@nrwl/js": "16.8.0",
-    "@nrwl/linter": "16.8.0",
-    "@nrwl/nx-cloud": "16.3.0",
-    "@nrwl/vite": "16.8.0",
-    "@nrwl/workspace": "16.8.0",
     "@scala-js/vite-plugin-scalajs": "^1.0.0",
     "@swc/cli": "0.1.62",
     "@swc/core": "^1.2.173",
@@ -45,7 +37,14 @@
     "vite-plugin-dts": "2.3.0",
     "vite-plugin-eslint": "^1.8.1",
     "vite-tsconfig-paths": "4.2.0",
-    "vitest": "0.31.4"
+    "vitest": "0.31.4",
+    "nx-cloud": "16.3.0",
+    "@nx/workspace": "16.8.0",
+    "@nx/esbuild": "16.8.0",
+    "@nx/js": "16.8.0",
+    "@nx/vite": "16.8.0",
+    "@nx/linter": "16.8.0",
+    "@nx/eslint-plugin": "16.8.0",
+    "@nx/jest": "16.8.0"
   }
 }
-

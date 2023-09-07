@@ -5,39 +5,28 @@
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@nrwl/esbuild:esbuild",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "executor": "@nx/esbuild:esbuild",
+      "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/packages/ts-using-vite",
         "main": "packages/ts-using-vite/src/index.ts",
         "tsConfig": "packages/ts-using-vite/tsconfig.lib.json",
-        "assets": [
-          "packages/ts-using-vite/*.md"
-        ],
-        "generatePackageJson": true
+        "assets": ["packages/ts-using-vite/*.md"],
+        "generatePackageJson": true,
+        "thirdParty": true
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
-      "outputs": [
-        "{options.outputFile}"
-      ],
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": [
-          "packages/ts-using-vite/**/*.ts"
-        ]
+        "lintFilePatterns": ["packages/ts-using-vite/**/*.ts"]
       }
     },
     "test": {
-      "executor": "@nrwl/vite:test",
-      "outputs": [
-        "coverage/packages/ts-using-vite"
-      ],
-      "dependsOn": [
-        "^build"
-      ],
+      "executor": "@nx/vite:test",
+      "outputs": ["{workspaceRoot}/coverage/packages/ts-using-vite"],
+      "dependsOn": ["^build"],
       "options": {
         "passWithNoTests": true,
         "reportsDirectory": "../../coverage/packages/ts-using-vite"

@@ -11,14 +11,10 @@
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
-      "outputs": [
-        "{options.outputFile}"
-      ],
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": [
-          "packages/utils/purescript/**/*.ts"
-        ]
+        "lintFilePatterns": ["packages/utils/purescript/**/*.ts"]
       }
     }
   },
