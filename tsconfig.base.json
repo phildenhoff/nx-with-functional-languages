@@ -28,9 +28,6 @@
       "@nx-with-functional-languages/utils/civet": [
         "packages/utils/civet/dist/index.ts"
       ],
-      "@nx-with-functional-languages/utils/clojurescript": [
-        "packages/utils/clojurescript/dist/main.js"
-      ],
       "@nx-with-functional-languages/utils/purescript": [
         "packages/utils/purescript/output/index.ts"
       ],
