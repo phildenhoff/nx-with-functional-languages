@@ -26,7 +26,7 @@
         "packages/ts-using-vite/src/index.ts"
       ],
       "@nx-with-functional-languages/utils/civet": [
-        "packages/utils/civet/src/index.ts"
+        "packages/utils/civet/dist/index.ts"
       ],
       "@nx-with-functional-languages/utils/clojurescript": [
         "packages/utils/clojurescript/dist/main.js"

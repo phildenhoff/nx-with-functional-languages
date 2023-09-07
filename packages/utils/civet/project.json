@@ -5,25 +5,40 @@
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@nrwl/js:tsc",
-      "outputs": ["{options.outputPath}"],
+      "executor": "nx:run-commands",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "inputs": [
+        "{projectRoot}/src/**/*.civet",
+        "{projectRoot}/src/*.civet"
+      ],
       "options": {
-        "outputPath": "dist/packages/utils/civet",
-        "main": "packages/utils/civet/src/index.ts",
-        "tsConfig": "packages/utils/civet/tsconfig.lib.json",
-        "assets": ["packages/utils/civet/*.md"]
+        "cwd": "packages/utils/civet",
+        "outputPath": "packages/utils/civet/dist/",
+        "commands": [
+          "pnpm civet -c src/**/*.civet -o dist/.ts",
+          "rm dist/index.ts || true",
+          "echo \"$(find dist/ -name '*.ts' | sed 's/.*\\///' | sed 's/\\.ts//' | sed 's/^/export * from \".\\//' | sed 's/$/\";/' | sed 's/\\/index\"/\"/')\" > dist/index.ts"
+        ]
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
-        "lintFilePatterns": ["packages/utils/civet/**/*.ts"]
+        "lintFilePatterns": [
+          "packages/utils/civet/**/*.ts"
+        ]
       }
     },
     "test": {
       "executor": "@nrwl/vite:test",
-      "outputs": ["coverage/packages/utils/civet"],
+      "outputs": [
+        "coverage/packages/utils/civet"
+      ],
       "options": {
         "passWithNoTests": true,
         "reportsDirectory": "../../../coverage/packages/utils/civet"
