@@ -10,19 +10,31 @@
         "command": "pnpm rescript",
         "cwd": "packages/utils/rescript"
       },
-      "outputs": ["{options.cwd}/src/**.bs.js", "{options.cwd}/src/**.gen.ts"],
-      "inputs": ["{projectRoot}/src/**.res"]
+      "outputs": [
+        "{options.cwd}/src/**.bs.js",
+        "{projectRoot}/lib/",
+        "{options.cwd}/src/**.gen.ts"
+      ],
+      "inputs": [
+        "{projectRoot}/src/**.res"
+      ]
     },
     "lint": {
       "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
-        "lintFilePatterns": ["packages/utils/rescript/**/*.ts"]
+        "lintFilePatterns": [
+          "packages/utils/rescript/**/*.ts"
+        ]
       }
     },
     "test": {
       "executor": "@nx/vite:test",
-      "outputs": ["{workspaceRoot}/coverage/packages/utils/rescript"],
+      "outputs": [
+        "{workspaceRoot}/coverage/packages/utils/rescript"
+      ],
       "options": {
         "passWithNoTests": true,
         "reportsDirectory": "../../../coverage/packages/utils/rescript"
