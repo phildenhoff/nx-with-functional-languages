@@ -6,25 +6,38 @@
   "targets": {
     "build": {
       "executor": "@nrwl/esbuild:esbuild",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/packages/ts-using-vite",
         "main": "packages/ts-using-vite/src/index.ts",
         "tsConfig": "packages/ts-using-vite/tsconfig.lib.json",
-        "assets": ["packages/ts-using-vite/*.md"],
+        "assets": [
+          "packages/ts-using-vite/*.md"
+        ],
         "generatePackageJson": true
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
-        "lintFilePatterns": ["packages/ts-using-vite/**/*.ts"]
+        "lintFilePatterns": [
+          "packages/ts-using-vite/**/*.ts"
+        ]
       }
     },
     "test": {
       "executor": "@nrwl/vite:test",
-      "outputs": ["coverage/packages/ts-using-vite"],
+      "outputs": [
+        "coverage/packages/ts-using-vite"
+      ],
+      "dependsOn": [
+        "^build"
+      ],
       "options": {
         "passWithNoTests": true,
         "reportsDirectory": "../../coverage/packages/ts-using-vite"
