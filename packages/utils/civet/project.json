@@ -1,0 +1,34 @@
+{
+  "name": "utils-civet",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/utils/civet/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/utils/civet",
+        "main": "packages/utils/civet/src/index.ts",
+        "tsConfig": "packages/utils/civet/tsconfig.lib.json",
+        "assets": ["packages/utils/civet/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/utils/civet/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/vite:test",
+      "outputs": ["coverage/packages/utils/civet"],
+      "options": {
+        "passWithNoTests": true,
+        "reportsDirectory": "../../../coverage/packages/utils/civet"
+      }
+    }
+  },
+  "tags": []
+}
