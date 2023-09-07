@@ -19,3 +19,23 @@ Where possible, we use the following guidelines:
 ## View the dependency graph
 
 Run `nx graph` to see a diagram of the dependencies of the projects.
+
+## Demonstrate builds & tests
+
+You can test importing the libraries using the `ts-using-vite` package. When the test task is executed, it will automatically build the libraries and then run the tests.
+
+```bash
+pnpm nx run ts-using-vite:test
+```
+
+You can also test the `js-no-build` package similary:
+
+```bash
+pnpm nx run js-no-build:test
+```
+
+And you can execute builds for each package by running
+
+```bash
+pnpm nx run utils-<package name>:build
+```
