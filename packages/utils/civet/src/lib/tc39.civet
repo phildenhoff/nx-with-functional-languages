@@ -1,18 +1,12 @@
-x := 0
-
-switch x
-  0
-    console.log("zero")
-  1
-    console.log("one")
-  else
-    console.log("something else", x)
-
-data := { a: 1, b: 2, c: 3 }
-
-data
-  |> Object.keys
-  |> console.log
-
 export function sum(a: number, b: number): number
-  a + b
+  a
+  |> (x) => x + b
+
+export function nameOfNumber(n: number): string
+  switch n
+    0
+      "zero"
+    1
+      "one"
+    else
+      "something else"

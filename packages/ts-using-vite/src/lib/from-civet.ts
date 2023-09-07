@@ -1,3 +1,7 @@
-import { nice, sum } from '@nx-with-functional-languages/utils/civet';
+import {
+  nice,
+  sum,
+  nameOfNumber,
+} from '@nx-with-functional-languages/utils/civet';
 
-export { nice, sum };
+export { nice, sum, nameOfNumber };
