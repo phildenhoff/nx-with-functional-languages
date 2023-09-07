@@ -1,14 +1,21 @@
 # Nx with functional languages
 
-A project to build proof-of-concept Nx packages using functional language projects that compile to JS.
-Using buildable libraries, we can compile to JS during a build and then use those libraries from other Nx libraries and apps.
+A demonstrations of how you can add functional, compile-to-JS languages to an Nx workspace, and then use those libraries from other Nx libraries and apps.
 
-Different languages are available in [packages/utils](https://github.com/phildenhoff/nx-with-functional-languages/tree/main/packages/utils) and test cases importing are in [packages/ts-using-vite/src/lib](https://github.com/phildenhoff/nx-with-functional-languages/tree/main/packages/ts-using-vite/src/lib)
+## Repo layout
 
-## Understand this workspace
+- `utils/`: Contains libraries written in compile-to-JS languages.
+- `ts-using-vite/`: Demonstrates how to use all of the `utils/` libraries from a TypeScript app.
+- `ts-using-tsc/`: Demonstrates how to use all of the `utils/` libraries from a TypeScript app (e.g. utils-rescript).
+- `js-no-build/`: Demonstrates how a JS-only app can import a (properly configured) library (e.g. utils-rescript).
+
+## Guidelines
+
+Where possible, we use the following guidelines:
+
+- **Use the Language's standard tools.** Generally, that means our `nx` tasks call out to the language's CLI using the `run-command` task.
+- **Use Vitest to execute tests.**
+
+## View the dependency graph
 
 Run `nx graph` to see a diagram of the dependencies of the projects.
-
-## Further help
-
-Visit the [Nx Documentation](https://nx.dev) to learn more.
