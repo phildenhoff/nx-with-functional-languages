@@ -5,16 +5,41 @@
   "projectType": "library",
   "targets": {
     "build": {
-      "command": "pnpm compile",
+      "executor": "nx:run-commands",
+      "outputs": [
+        "{workspaceRoot}/dist/utils/purescript"
+      ],
+      "inputs": [
+        "{projectRoot}/src/**/*.purs"
+      ],
       "options": {
+        "commands": [
+          "pnpm spago build --purs-args '-o ../../../dist/utils/purescript'"
+        ],
         "cwd": "packages/utils/purescript"
       }
     },
     "lint": {
       "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
-        "lintFilePatterns": ["packages/utils/purescript/**/*.ts"]
+        "lintFilePatterns": [
+          "packages/utils/purescript/**/*.ts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "nx:run-commands",
+      "dependsOn": [
+        "build"
+      ],
+      "options": {
+        "commands": [
+          "pnpm spago test"
+        ],
+        "cwd": "packages/utils/purescript"
       }
     }
   },
