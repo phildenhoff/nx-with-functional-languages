@@ -1,3 +1,4 @@
+@ocaml.doc("`make(value)` returns once, twice, or the number + the text 'times' depending on the value.")
 @genType
 let make = (~count) => {
   switch count {
@@ -7,6 +8,7 @@ let make = (~count) => {
   }
 }
 
+@ocaml.doc("Run some array operations on the items list.")
 @genType
 let result = (~items) =>
   items
