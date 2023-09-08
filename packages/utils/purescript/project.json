@@ -14,7 +14,10 @@
       ],
       "options": {
         "commands": [
-          "pnpm spago build --purs-args '-o ../../../dist/utils/purescript'"
+          "mkdir -p ../../../dist/utils/purescript/src",
+          "pnpm spago build --purs-args '-o ../../../dist/utils/purescript/src/'",
+          "pnpm spago run --main SampleApp.TsBridge.Main --exec-args '--output-dir ../../../dist/utils/purescript/src'",
+          "cp -r src/index.d.ts ../../../dist/utils/purescript/src/index.d.ts"
         ],
         "cwd": "packages/utils/purescript"
       }
