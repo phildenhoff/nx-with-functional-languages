@@ -29,7 +29,7 @@
         "packages/utils/civet/dist/index.ts"
       ],
       "@nx-with-functional-languages/utils/purescript": [
-        "packages/utils/purescript/output/index.ts"
+        "dist/utils/purescript/src/index.d.ts"
       ],
       "@nx-with-functional-languages/utils/rescript": [
         "dist/utils/rescript/src/index.d.ts",
