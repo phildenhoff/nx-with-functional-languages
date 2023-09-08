@@ -5,16 +5,29 @@
   "projectType": "library",
   "targets": {
     "build": {
-      "command": "nix-shell -p --command 'sbt compile; sbt fastLinkJS' sbt; cp ./target/scala-*/livechart-fastopt/main.js dist/main.js",
+      "executor": "nx:run-commands",
       "options": {
+        "commands": [
+          "nix-shell -p sbt --command 'sbt compile; sbt fastLinkJS'",
+          "mkdir -p dist",
+          "cp ./target/scala-*/livechart-fastopt/main.js dist/main.js",
+          "cp ./src/index.d.ts dist/index.d.ts"
+        ],
+        "parallel": false,
         "cwd": "packages/utils/scalajs"
       },
-      "inputs": ["{projectRoot}/src/**/*.scala"],
-      "outputs": ["{projectRoot}/dist/main.js"]
+      "inputs": [
+        "{projectRoot}/src/**/*.scala"
+      ],
+      "outputs": [
+        "{projectRoot}/dist/"
+      ]
     },
     "test": {
       "executor": "@nx/vite:test",
-      "outputs": ["{workspaceRoot}/coverage/packages/utils/scalajs"],
+      "outputs": [
+        "{workspaceRoot}/coverage/packages/utils/scalajs"
+      ],
       "options": {
         "passWithNoTests": true,
         "reportsDirectory": "../../../coverage/packages/utils/scalajs"
@@ -22,9 +35,13 @@
     },
     "lint": {
       "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
-        "lintFilePatterns": ["packages/utils/scalajs/**/*.ts"]
+        "lintFilePatterns": [
+          "packages/utils/scalajs/**/*.ts"
+        ]
       }
     }
   },

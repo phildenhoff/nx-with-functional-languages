@@ -36,7 +36,7 @@
         "dist/utils/rescript/src/index.js"
       ],
       "@nx-with-functional-languages/utils/scalajs": [
-        "packages/utils/scalajs/dist/main.js"
+        "packages/utils/scalajs/dist/index.d.ts"
       ]
     }
   },
