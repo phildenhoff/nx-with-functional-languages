@@ -16,10 +16,11 @@
       "options": {
         "cwd": "packages/utils/civet",
         "commands": [
-          "pnpm civet -c src/**/*.civet -o dist/.ts",
-          "rm dist/index.ts || true",
-          "echo \"$(find dist/ -name '*.ts' | sed 's/.*\\///' | sed 's/\\.ts//' | sed 's/^/export * from \".\\//' | sed 's/$/\";/' | sed 's/\\/index\"/\"/')\" > dist/index.ts"
-        ]
+          "pnpm civet -c src/**/*.civet -o ../../../dist/utils/civet/.ts",
+          "rm ../../../dist/utils/civet/index.d.ts || true",
+          "echo \"$(find ../../../dist/utils/civet/ -name '*.ts' | sed 's/.*\\///' | sed 's/\\.ts//' | sed 's/^/export * from \".\\//' | sed 's/$/\";/' | sed 's/\\/index\"/\"/')\" > ../../../dist/utils/civet/index.d.ts"
+        ],
+        "parallel": false
       }
     },
     "lint": {

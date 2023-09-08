@@ -26,7 +26,7 @@
         "packages/ts-using-vite/src/index.ts"
       ],
       "@nx-with-functional-languages/utils/civet": [
-        "packages/utils/civet/dist/index.ts"
+        "dist/utils/civet/index.d.ts"
       ],
       "@nx-with-functional-languages/utils/purescript": [
         "dist/utils/purescript/src/index.d.ts"
