@@ -92,6 +92,8 @@ instance TsBridge Species where
 
 alien :: Species
 alien = Alien
+human :: Species
+human = Human
 
 --------------------------------------------------------------------------------
 
@@ -144,6 +146,7 @@ tsModules =
         , user
         , letsPromise
         , alien
+        , human
         , temperature
         }
     , TSB.tsValues Tok
