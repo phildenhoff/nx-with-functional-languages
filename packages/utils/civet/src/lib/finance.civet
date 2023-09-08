@@ -13,13 +13,23 @@ export Money := {
       currency,
     };
   }
-  sum: function (a: TMoney, b: TMoney): TMoney
-    if (a.currency !== b.currency) {
-      throw new Error('Currencies do not match');
+  sum: function (list: TMoney[]): TMoney
+    firstCurrency := list[0].currency
+
+    mismatchedCurrencies := list.filter(function (money) {
+      return money.currency !== firstCurrency;
+    });
+
+    if (mismatchedCurrencies.length > 0) {
+      throw new Error('Currencies do not match. Expected ' + firstCurrency + ' but got ' + mismatchedCurrencies[0].currency);
     }
+    
+    newAmount := list.reduce(function (acc, item) {
+      acc + item.amount
+    }, 0);
 
     return {
-      amount: a.amount + b.amount,
-      currency: a.currency,
+      amount: newAmount,
+      currency: firstCurrency,
     };
 }

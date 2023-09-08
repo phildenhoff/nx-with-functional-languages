@@ -26,12 +26,12 @@ describe('Money', () => {
     const one = Money.new(1, Currency.CAD);
     const two = Money.new(2, Currency.CAD);
 
-    expect(Money.sum(one, two)).toEqual(Money.new(3, Currency.CAD));
+    expect(Money.sum([one, two])).toEqual(Money.new(3, Currency.CAD));
   });
   it('must throw an error when summing different currencies', () => {
     const one = Money.new(1, Currency.CAD);
     const two = Money.new(2, Currency.USD);
 
-    expect(() => Money.sum(one, two)).toThrowError();
+    expect(() => Money.sum([one, two])).toThrowError();
   });
 });
