@@ -32,8 +32,8 @@
         "packages/utils/purescript/output/index.ts"
       ],
       "@nx-with-functional-languages/utils/rescript": [
-        "packages/utils/rescript/src/index.ts",
-        "packages/utils/rescript/src/index_bs.js"
+        "dist/utils/rescript/src/index.d.ts",
+        "dist/utils/rescript/src/index.js"
       ],
       "@nx-with-functional-languages/utils/scalajs": [
         "packages/utils/scalajs/dist/main.js"
