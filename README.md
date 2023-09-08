@@ -9,6 +9,15 @@ A demonstrations of how you can add functional, compile-to-JS languages to an Nx
 - `ts-using-tsc/`: Demonstrates how to use all of the `utils/` libraries from a TypeScript app (e.g. utils-rescript).
 - `js-no-build/`: Demonstrates how a JS-only app can import a (properly configured) library (e.g. utils-rescript).
 
+Currently, this repo supports writing code in the following languages:
+
+- Purescript
+- Rescript
+- Civet
+- Scala
+
+In the future, I'd like to support ElixirScript.
+
 ## Guidelines
 
 Where possible, we use the following guidelines:
