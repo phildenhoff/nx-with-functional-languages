@@ -1,3 +1,5 @@
 {
-  "imports": {}
+  "imports": {
+    "@utils/civet/finance": "./dist/utils/civet/finance.ts"
+  }
 }
