@@ -6,5 +6,8 @@
   "purescript.pscIdelogLevel": "",
   "purescript.packagePath": "packages/utils/purescript/",
   "purescript.pursExe": "purs",
-  "purescript.sourcePath": "packages/utils/purescript/src"
+  "purescript.sourcePath": "packages/utils/purescript/src",
+  "deno.enablePaths": ["apps/deno-app"],
+  "deno.unstable": true,
+  "deno.importMap": "./import_map.json"
 }
