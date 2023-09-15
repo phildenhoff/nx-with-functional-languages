@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@danielx/civet': ^0.6.31
+  '@nx/deno': ^16.8.2
   '@nx/esbuild': 16.8.0
   '@nx/eslint-plugin': 16.8.0
   '@nx/jest': 16.8.0
@@ -48,6 +49,7 @@ dependencies:
 
 devDependencies:
   '@danielx/civet': 0.6.31_typescript@5.1.6
+  '@nx/deno': 16.8.2_34dwuf7sfk3rubz4uvrfpxemhm
   '@nx/esbuild': 16.8.0_ne3b2oiweysmrpkj2mmvpkqeha
   '@nx/eslint-plugin': 16.8.0_4s4yaql43ekfgo5xzlcnz4qsim
   '@nx/jest': 16.8.0_wgzocifagnedvkcumi6zcqmrfa
@@ -2534,6 +2536,22 @@ packages:
       rimraf: 3.0.2
     dev: true
 
+  /@nrwl/deno/16.8.2_34dwuf7sfk3rubz4uvrfpxemhm:
+    resolution: {integrity: sha512-3Bk8vfNGPDD8nJu8Y/KDASw4g6sfgIhB+6SrjUmk5TqqFWA0BLE2a70kNnS3iQqvub1UShs2c7PKLU39N1wxcA==}
+    dependencies:
+      '@nx/deno': 16.8.2_34dwuf7sfk3rubz4uvrfpxemhm
+    transitivePeerDependencies:
+      - '@swc-node/register'
+      - '@swc/core'
+      - '@swc/wasm'
+      - '@types/node'
+      - debug
+      - nx
+      - supports-color
+      - typescript
+      - verdaccio
+    dev: true
+
   /@nrwl/devkit/16.8.0_nx@16.8.0:
     resolution: {integrity: sha512-zpSNUCj9RZAAcCIHcjeVQT8FPutnaCe0empvm0yxWPbmIXjN/4Lw1f4V5K42MNDSa4Z8Hvj1tTL3+8JXSV9JxA==}
     dependencies:
@@ -2674,6 +2692,27 @@ packages:
       - '@swc-node/register'
       - '@swc/core'
       - debug
+    dev: true
+
+  /@nx/deno/16.8.2_34dwuf7sfk3rubz4uvrfpxemhm:
+    resolution: {integrity: sha512-CWGG2pLKpj3WWkI5Rvx5ONAwHjEdUO7dbUUKePkJeLecBF7L5hYPzhJmSuWUH7qeAbfapaqd57b+1BviDUigzQ==}
+    dependencies:
+      '@nrwl/deno': 16.8.2_34dwuf7sfk3rubz4uvrfpxemhm
+      '@nx/devkit': 16.8.0_nx@16.8.0
+      '@nx/js': 16.8.0_34dwuf7sfk3rubz4uvrfpxemhm
+      chalk: 4.1.2
+      enquirer: 2.3.6
+      fs-extra: 11.1.1
+    transitivePeerDependencies:
+      - '@swc-node/register'
+      - '@swc/core'
+      - '@swc/wasm'
+      - '@types/node'
+      - debug
+      - nx
+      - supports-color
+      - typescript
+      - verdaccio
     dev: true
 
   /@nx/devkit/16.8.0_nx@16.8.0:
