@@ -41,7 +41,7 @@ jobs:
         run: pnpm install
 
       - name: Run tests
-        run: nx run-many --target=test --all --exclude=ts-using-tsc
+        run: pnpm nx run-many --target=test --all --exclude=ts-using-tsc
 
       - name: Run lint
-        run: nx run-many --target=lint --all
+        run: pnpm nx run-many --target=lint --all
