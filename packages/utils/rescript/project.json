@@ -45,16 +45,6 @@
           "packages/utils/rescript/**/*.ts"
         ]
       }
-    },
-    "test": {
-      "executor": "@nx/vite:test",
-      "outputs": [
-        "{workspaceRoot}/coverage/packages/utils/rescript"
-      ],
-      "options": {
-        "passWithNoTests": true,
-        "reportsDirectory": "../../../coverage/packages/utils/rescript"
-      }
     }
   },
   "tags": []

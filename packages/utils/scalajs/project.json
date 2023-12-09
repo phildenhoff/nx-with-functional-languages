@@ -23,16 +23,6 @@
         "{projectRoot}/dist/"
       ]
     },
-    "test": {
-      "executor": "@nx/vite:test",
-      "outputs": [
-        "{workspaceRoot}/coverage/packages/utils/scalajs"
-      ],
-      "options": {
-        "passWithNoTests": true,
-        "reportsDirectory": "../../../coverage/packages/utils/scalajs"
-      }
-    },
     "lint": {
       "executor": "@nx/linter:eslint",
       "outputs": [
