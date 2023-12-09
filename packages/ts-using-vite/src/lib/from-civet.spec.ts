@@ -26,7 +26,12 @@ describe('Money', () => {
     const one = Money.new(1, Currency.CAD);
     const two = Money.new(2, Currency.CAD);
 
-    expect(Money.sum([one, two])).toEqual(Money.new(3, Currency.CAD));
+    expect(Money.sum([one, two]).amount).toEqual(
+      Money.new(3, Currency.CAD).amount
+    );
+    expect(Money.sum([one, two]).currency).toEqual(
+      Money.new(3, Currency.CAD).currency
+    );
   });
   it('must throw an error when summing different currencies', () => {
     const one = Money.new(1, Currency.CAD);
