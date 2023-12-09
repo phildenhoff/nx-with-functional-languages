@@ -1,0 +1,14 @@
+name: Quality Check
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+      - name: Install dependencies
+        run: pnpm install
+      - name: Run tests
+        run: nx run-many --target=test --all --exclude=ts-using-tsc
