@@ -6,6 +6,7 @@
   "private": true,
   "dependencies": {
     "@swc/helpers": "0.5.2",
+    "deno": "^0.1.1",
     "rescript": "^10.1.4",
     "tslib": "^2.3.0"
   },
