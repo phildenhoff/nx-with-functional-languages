@@ -22,17 +22,6 @@
       "outputs": [
         "{projectRoot}/dist/"
       ]
-    },
-    "lint": {
-      "executor": "@nx/linter:eslint",
-      "outputs": [
-        "{options.outputFile}"
-      ],
-      "options": {
-        "lintFilePatterns": [
-          "packages/utils/scalajs/**/*.ts"
-        ]
-      }
     }
   },
   "tags": []
